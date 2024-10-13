@@ -4,8 +4,6 @@ require("./add_to_cart.php");
 
 // Check if the user is logged in
 $isLoggedIn = isset($_SESSION['id']); // Assuming 'user_id' is stored in session on login
-$obj = new add_to_cart();
-$totalproduct=$obj->totalProduct();
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -96,7 +94,7 @@ $totalproduct=$obj->totalProduct();
                                     <?php endif; ?>
                                     <div class="htc__shopping__cart">
                                         <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
-                                        <a href="./cart.php"><span class="htc__qua"><?php echo $totalproduct ?></span></a>
+                                        <a href="./cart.php"><span class="htc__qua">0</span></a>
                                     </div>
                                 </div>
                             </div>
