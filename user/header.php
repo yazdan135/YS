@@ -1,9 +1,10 @@
 <?php
+// Start the session to access session variables
+session_start();
 require("./connection_user.php");
-require("./add_to_cart.php");
 
-// Check if the user is logged in
-$isLoggedIn = isset($_SESSION['id']); // Assuming 'user_id' is stored in session on login
+// Check if the user is logged in by checking if 'id' is set in session
+$isLoggedIn = isset($_SESSION['id']);
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -11,7 +12,7 @@ $isLoggedIn = isset($_SESSION['id']); // Assuming 'user_id' is stored in session
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>YS | Traders</title>
+    <title>YS | Traders & Co.</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -56,7 +57,8 @@ $isLoggedIn = isset($_SESSION['id']); // Assuming 'user_id' is stored in session
                         <div class="menumenu__container clearfix">
                             <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
                                 <div class="logo">
-                                    <a href="index.php"><img src="images/logo/4.png" alt="logo images"></a>
+                                    <a href="index.php"><img src="../ys logo.png" style="width: 600px; height: 70px;" alt="logo images"></a>
+                                    <a href="index.php"><img src="../trader.png" style="width: 500px; height: 50px;" alt="logo images"></a>
                                 </div>
                             </div>
                             <div class="col-md-7 col-lg-8 col-sm-5 col-xs-3">
@@ -74,6 +76,7 @@ $isLoggedIn = isset($_SESSION['id']); // Assuming 'user_id' is stored in session
                                                 <?php } ?>
                                             </ul>
                                         </li>
+                                        <li><a href="shopnow.php">All Product</a></li>
                                         <li><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -81,10 +84,12 @@ $isLoggedIn = isset($_SESSION['id']); // Assuming 'user_id' is stored in session
                             <div class="col-md-3 col-lg-2 col-sm-4 col-xs-4">
                                 <div class="header__right">
                                     <?php if ($isLoggedIn): ?>
+                                        <!-- If user is logged in, show Logout button -->
                                         <div class="header__account">
                                             <a href="./logout.php">Logout</a>
                                         </div>
                                     <?php else: ?>
+                                        <!-- If user is not logged in, show Login and SignUp buttons -->
                                         <div class="header__account">
                                             <a href="./login_user.php">Login</a>
                                         </div>
@@ -92,9 +97,10 @@ $isLoggedIn = isset($_SESSION['id']); // Assuming 'user_id' is stored in session
                                             <a href="./signup.php">SignUp</a>
                                         </div>
                                     <?php endif; ?>
+                                    
                                     <div class="htc__shopping__cart">
                                         <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
-                                        <a href="./cart.php"><span class="htc__qua">0</span></a>
+                                        <a href="#"><span class="htc__qua">0</span></a>
                                     </div>
                                 </div>
                             </div>

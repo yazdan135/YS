@@ -93,7 +93,7 @@ if(isset($_POST['submit'])){
 </style>
 
 <!-- Start Breadcrumb area -->
-<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/4.jpg) no-repeat center center / cover;">
+<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(../banner\ page.png) no-repeat center center / cover;">
     <div class="ht__bradcaump__wrap">
         <div class="container">
             <div class="row">
