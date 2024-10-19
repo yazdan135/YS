@@ -3,11 +3,12 @@ require("./connection_user.php");
 require("./function_user.php");
 require("./header.php");
 ?>
+<marquee>Subscribe To Our News Letter To Participate Every Month And Win Prizes Find News Letter In Buttom</marquee>
 <!-- Start Slider Area -->
 <div class="slider__container slider--one bg__cat--3">
     <div class="slide__container slider__activation__wrap owl-carousel">
         <!-- Start Single Slide -->
-        <div class="single__slide animation__style01 slider__fixed--height" style="background-color: lightgray;">
+        <div class="single__slide animation__style01 slider__fixed--height" style="background-color: #efefef;">
             <div class="container">
                 <div class="row align-items__center">
                     <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">

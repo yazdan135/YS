@@ -13,12 +13,11 @@ $isLoggedIn = isset($_SESSION['id']);
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>YS | Traders & Co.</title>
+    <link rel="shortcut icon" href="../ys logo.png" type="image/x-icon">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- All css files are included here. -->
     <!-- Bootstrap framework main css -->
@@ -51,7 +50,7 @@ $isLoggedIn = isset($_SESSION['id']);
         <!-- Start Header Style -->
         <header id="htc__header" class="htc__header__area header--one">
             <!-- Start Mainmenu Area -->
-            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
+            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header sticky-top">
                 <div class="container">
                     <div class="row">
                         <div class="menumenu__container clearfix">
@@ -77,6 +76,7 @@ $isLoggedIn = isset($_SESSION['id']);
                                             </ul>
                                         </li>
                                         <li><a href="shopnow.php">All Product</a></li>
+                                        <li><a href="./about.php">About Us</a></li>
                                         <li><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -112,3 +112,4 @@ $isLoggedIn = isset($_SESSION['id']);
             <!-- End Mainmenu Area -->
         </header>
         <!-- End Header Area -->
+        <hr style="width: 100%; height: 2px; background-color: #ccc; border: none; margin: 0;">
