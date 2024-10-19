@@ -25,7 +25,7 @@ window.location.href='index.php';
                         <nav class="bradcaump-inner">
                             <a class="breadcrumb-item" href="index.php">Home</a>
                             <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                            <span class="breadcrumb-item active">Products</span>
+                            <span class="breadcrumb-item active">Category Page</span>
                         </nav>
                     </div>
                 </div>

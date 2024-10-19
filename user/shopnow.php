@@ -13,7 +13,7 @@ require("./header.php");
                         <nav class="bradcaump-inner">
                             <a class="breadcrumb-item" href="index.php">Home</a>
                             <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                           <a href="./contact.php"> <span class="breadcrumb-item active">Contact Us</span></a>
+                            <span class="breadcrumb-item active">All Products</span>
                         </nav>
                     </div>
                 </div>

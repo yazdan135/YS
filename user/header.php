@@ -8,7 +8,7 @@ $isLoggedIn = isset($_SESSION['id']);
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
- 
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,7 +17,8 @@ $isLoggedIn = isset($_SESSION['id']);
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Place favicon.ico in the root directory -->    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- All css files are included here. -->
     <!-- Bootstrap framework main css -->
@@ -71,13 +72,14 @@ $isLoggedIn = isset($_SESSION['id']);
                                                 $result = mysqli_query($con, $sql);
                                                 while ($rows = mysqli_fetch_assoc($result)) {
                                                 ?>
-                                                    <li><a href="category.php?id=<?php echo $rows['id']?>"><?php echo $rows['category']; ?></a></li>
+                                                    <li><a href="category.php?id=<?php echo $rows['id'] ?>"><?php echo $rows['category']; ?></a></li>
                                                 <?php } ?>
                                             </ul>
                                         </li>
                                         <li><a href="shopnow.php">All Product</a></li>
                                         <li><a href="./about.php">About Us</a></li>
                                         <li><a href="contact.php">Contact</a></li>
+
                                     </ul>
                                 </nav>
                             </div>
@@ -97,11 +99,15 @@ $isLoggedIn = isset($_SESSION['id']);
                                             <a href="./signup.php">SignUp</a>
                                         </div>
                                     <?php endif; ?>
-                                    
+
                                     <div class="htc__shopping__cart">
                                         <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
                                         <a href="#"><span class="htc__qua">0</span></a>
+
                                     </div>
+
+
+
                                 </div>
                             </div>
                         </div>
