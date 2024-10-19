@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
     $name = $_POST['name'];
 
     // Check if the email already exists
-    $checkEmailQuery = "SELECT * FROM news WHERE email = '$email'";
+    $checkEmailQuery = "SELECT * FROM allnews WHERE email = '$email'";
     $checkEmailResult = mysqli_query($con, $checkEmailQuery);
 
     if (mysqli_num_rows($checkEmailResult) > 0) {
@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
         echo "<script>alert('Email already exists, please try another email.');</script>";
     } else {
         // Insert new record if email doesn't exist
-        $sql = "INSERT INTO news (email, name) VALUES ('$email', '$name')";
+        $sql = "INSERT INTO allnews (email, name) VALUES ('$email', '$name')";
         $result = mysqli_query($con, $sql);
 
         if ($result) {

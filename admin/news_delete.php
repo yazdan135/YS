@@ -2,7 +2,7 @@
 include("./connection_inc.php");
 
 $Id = $_GET['id'];
-$sql = "delete from news where id = $Id";
+$sql = "delete from allnews where id = $Id";
 $result = mysqli_query($con, $sql);
 
 echo "<script>
