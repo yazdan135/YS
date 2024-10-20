@@ -2,8 +2,16 @@
 require("./connection_user.php");
 require("./function_user.php");
 require("./header.php");
+$marqee = "select * from marqee where status = 1";
+$result_marqee = mysqli_query($con, $marqee);
 ?>
-<marquee>Subscribe To Our News Letter To Participate Every Month And Win Prizes Find News Letter In Buttom</marquee>
+<?php
+while ($row = mysqli_fetch_array($result_marqee)) {
+
+
+?>
+    <marquee><?php echo $row['sentence'] ?></marquee>
+<?php } ?>
 <!-- Start Slider Area -->
 <div class="slider__container slider--one bg__cat--3">
     <div class="slide__container slider__activation__wrap owl-carousel">
@@ -60,16 +68,16 @@ require("./header.php");
                                         <img src="../admin/img/product/<?php echo $list['image'] ?>" alt="product images">
                                     </a>
                                 </div>
-                            
+
                                 <div class="fr__product__inner">
                                     <h4><a href="product.php?id=<?php echo $list['id'] ?>"><?php echo $list['product_name'] ?></a></h4>
                                     <ul class="fr__pro__prize">
 
-                                    <h5 class="fr__product__inner"><?php echo $list['s_desc'] ?></h5>
+                                        <h5 class="fr__product__inner"><?php echo $list['s_desc'] ?></h5>
 
                                     </ul>
                                     <ul class="fr__pro__prize">
-                                    <li class="old__prize"> <strong class="text-dark">  Rs <?php echo $list['price'] ?>/- only</strong></li>
+                                        <li class="old__prize"> <strong class="text-dark"> Rs <?php echo $list['price'] ?>/- only</strong></li>
 
 
                                     </ul>

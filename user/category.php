@@ -25,7 +25,7 @@ window.location.href='index.php';
                         <nav class="bradcaump-inner">
                             <a class="breadcrumb-item" href="index.php">Home</a>
                             <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                            <span class="breadcrumb-item active">Category Page</span>
+                            <a class="breadcrumb-item" href="./category.php?id=<?php echo $get_product['0']['category_id'] ?>"><?php echo $get_product['0']['category'] ?></a>
                         </nav>
                     </div>
                 </div>
@@ -91,27 +91,64 @@ window.location.href='index.php';
 
                             <div role="tabpanel" id="list-view" class="single-grid-view tab-pane fade clearfix">
                                 <div class="col-xs-12">
-                                    <?php foreach ($get_product as $list) { ?>
-                                        <div class="ht__list__wrap">
+                                    <div class="ht__list__wrap">
+                                        <?php
+                                        $get_product = get_product($con, 'latest', '', ''); // Pass the status as 1
+                                        foreach ($get_product as $list) {
+                                        ?>
+                                            <!-- Start List Product -->
                                             <div class="ht__list__product">
+
                                                 <div class="ht__list__thumb">
-                                                    <a href="product.php?id=<?php echo $list['id'] ?>"> <img src="../admin/img/product/<?php echo $list['image'] ?>" style="height: 300px;" alt="product images"></a>
+                                                    <a href="product.php?id=<?php echo $list['id'] ?>"><img src="../admin/img/product/<?php echo $list['image'] ?>" style="height: 300px; width:300px;" alt="product images"></a>
                                                 </div>
+
                                                 <div class="htc__list__details">
-                                                    <h4><a href="product.php?id=<?php echo $list['id'] ?>"><?php echo $list['product_name'] ?></a></h4>
-                                                    <ul class="pro__prize">
-                                                        <h5 class="fr__product__inner"><?php echo $list['l_desc'] ?></h5>
-                                                    </ul>
-                                                    <ul class="pro__prize">
-                                                        <h5 class="fr__product__inner">Rs <?php echo $list['price'] ?>/- Only</h5>
-                                                    </ul>
-                                                    <div class="fr__list__btn">
-                                                        <a class="fr__btn" href="cart.html">Add To Cart</a>
+                                                    <div class="sin__desc align--left">
+                                                        <p><span>Name:</span></p>
+                                                        <ul class="pro__cat__list">
+                                                            <h4><?php echo $list['product_name'] ?></h4>
+                                                        </ul>
+
                                                     </div>
+                                                    <div class="sin__desc align--left">
+                                                        <p><span>Price:</span></p>
+                                                        <ul class="pro__cat__list">
+                                                            <h4><?php echo $list['price'] ?></h4>
+                                                        </ul>
+
+                                                    </div>
+                                                    <div class="sin__desc align--left">
+                                                        <p><span>Packing:</span></p>
+                                                        <ul class="pro__cat__list">
+                                                            <h4><?php echo $list['paking'] ?></h4>
+                                                        </ul>
+
+                                                    </div>
+                                                    <div class="sin__desc align--left">
+                                                        <p><span>Category:</span></p>
+                                                        <ul class="pro__cat__list">
+                                                            <h4><?php echo $list['product_name'] ?></h4>
+                                                        </ul>
+
+                                                    </div>
+
+
+                                                    <div class="sin__desc align--left">
+                                                        <p><span>Description:</span></p>
+                                                        <ul class="pro__cat__list">
+                                                            <h4><?php echo $list['l_desc'] ?></h4>
+                                                        </ul>
+
+                                                    </div>
+
                                                 </div>
                                             </div>
-                                        </div>
-                                    <?php } ?>
+                                            <!-- End List Product -->
+                                            <hr style="border: 1px solid #ccc; margin: 20px 0;">
+
+                                        <?php } ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>

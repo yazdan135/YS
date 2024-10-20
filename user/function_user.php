@@ -15,39 +15,43 @@ function prx($arr)
 
 function get_product($con, $type = '', $limit = '', $status = null, $cat_id = '', $product_id = '')
 {
-    $sql = "SELECT product.*, category.category, product.paking FROM product 
+    // Initialize base SQL query to select product data
+    $sql = "SELECT product.*, category.category, product.paking 
+            FROM product 
             JOIN category ON product.category_id = category.id 
-            WHERE product.status = 1"; // Start with a basic query
+            WHERE 1"; // '1' ensures no SQL error in case no conditions are added.
 
+    // Add conditions based on the function arguments
     if ($status === 1) {
-        $sql .= " AND product.status = 1"; // Add the status condition only if status is 1
+        $sql .= " AND product.status = 1"; // Only fetch products with status 1 if required
     }
     if ($cat_id != '') {
-        $sql .= " AND product.category_id = $cat_id"; // Add category id condition only if category id is provided
+        $sql .= " AND product.category_id = $cat_id"; // Filter by category if specified
     }
     if ($product_id != '') {
-        $sql .= " AND product.id = $product_id"; // Add product id condition only if product id is provided
+        $sql .= " AND product.id = $product_id"; // Filter by product id if specified
     }
     if ($type == 'latest') {
-        $sql .= " ORDER BY product.id DESC"; // Sort by ID if type is latest
+        $sql .= " ORDER BY product.id DESC"; // Order by latest if type is 'latest'
     }
 
+    // Add limit if specified
     if ($limit != '') {
-        $sql .= " LIMIT $limit"; // Add limit if specified
+        $sql .= " LIMIT $limit";
     }
 
+    // Execute the query and handle errors
     $res = mysqli_query($con, $sql);
     if (!$res) {
-        die("Database query failed: " . mysqli_error($con)); // Error handling
+        die("Database query failed: " . mysqli_error($con)); // Debugging help
     }
 
-    $data = []; // Initialize data array
+    $data = []; // Initialize an empty array to hold the results
 
-    while ($row = mysqli_fetch_array($res)) {
-        $data[] = $row; // Collect results
+    // Fetch all rows returned by the query
+    while ($row = mysqli_fetch_assoc($res)) {
+        $data[] = $row;
     }
 
-    return $data; // Return collected results
+    return $data; // Return the fetched data array
 }
-
-?>

@@ -68,6 +68,7 @@
                     <a href="./user_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Users</a>
                     <a href="./userban_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Ban Users</a>
                     <a href="./news_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>News Letter</a>
+                    <a href="./marqee_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Marqee text</a>
                     <a href="./contact_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Contact Us</a>
                 </div>
             </nav>

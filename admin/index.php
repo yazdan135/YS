@@ -1,7 +1,20 @@
 <?php
-require("./function_inc.php");
 require("./connection_inc.php");
+require("./function_inc.php");
 require("./header.php");
+
+$sql_product_show = "SELECT * FROM product";
+$result_product_show = mysqli_query($con, $sql_product_show);
+
+$sql_category_show = "SELECT * FROM category";
+$result_category_show = mysqli_query($con, $sql_category_show);
+
+// $sql_order_show = "SELECT * FROM orders";
+// $result_order_show = mysqli_query($con, $sql_order_show);
+
+$sql_user_show = "SELECT * FROM user";
+$result_user_show = mysqli_query($con, $sql_user_show);
+
 ?>
 <!-- Sale & Revenue Start -->
 <div class="container-fluid pt-4 px-4">
@@ -10,8 +23,8 @@ require("./header.php");
             <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                 <i class="fa fa-chart-line fa-3x text-primary"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Today Sale</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Total Products</p>
+                    <h6 class="mb-0"><?php echo mysqli_num_rows($result_product_show);?></h6>
                 </div>
             </div>
         </div>
@@ -19,8 +32,8 @@ require("./header.php");
             <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                 <i class="fa fa-chart-bar fa-3x text-primary"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Total Sale</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Total Category</p>
+                    <h6 class="mb-0"><?php echo mysqli_num_rows($result_category_show);?></h6>
                 </div>
             </div>
         </div>
@@ -28,8 +41,8 @@ require("./header.php");
             <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                 <i class="fa fa-chart-area fa-3x text-primary"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Today Revenue</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Total Orders</p>
+                    <h6 class="mb-0">bhot sare</h6>
                 </div>
             </div>
         </div>
@@ -37,8 +50,8 @@ require("./header.php");
             <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
                 <i class="fa fa-chart-pie fa-3x text-primary"></i>
                 <div class="ms-3">
-                    <p class="mb-2">Total Revenue</p>
-                    <h6 class="mb-0">$1234</h6>
+                    <p class="mb-2">Total Users</p>
+                    <h6 class="mb-0"><?php echo mysqli_num_rows($result_user_show);?></h6>
                 </div>
             </div>
         </div>

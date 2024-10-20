@@ -110,7 +110,7 @@ if ($product_id > 0) {
                         <div class="fr__list__btn">
                             <ul>
                                 <li>
-                                <a class="fr__btn" href="#">Add To Cart</a>
+                                    <a class="fr__btn" href="javascript:void(0)" onclick="manage_cart('<?php echo $get_product['0']['id'] ?>','add')">Add To Cart</a>
                                 </li>
                             </ul>
                         </div>

@@ -2,9 +2,12 @@
 // Start the session to access session variables
 session_start();
 require("./connection_user.php");
+require("./add_to_cart.inc.php");
 
 // Check if the user is logged in by checking if 'id' is set in session
 $isLoggedIn = isset($_SESSION['id']);
+$obj = new add_to_cart();
+$totalProduct=$obj->totalProduct();
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -102,7 +105,7 @@ $isLoggedIn = isset($_SESSION['id']);
 
                                     <div class="htc__shopping__cart">
                                         <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
-                                        <a href="#"><span class="htc__qua">0</span></a>
+                                        <a href="./cart.php"><span class="htc__qua"><?php echo $totalProduct ?></span></a>
 
                                     </div>
 
@@ -112,7 +115,6 @@ $isLoggedIn = isset($_SESSION['id']);
                             </div>
                         </div>
                     </div>
-                    <div class="mobile-menu-area"></div>
                 </div>
             </div>
             <!-- End Mainmenu Area -->
