@@ -95,8 +95,8 @@ if (!isset($_SESSION['cart']) || empty($_SESSION['cart'])) {
                                         <a href="./shopnow.php">Continue Shopping</a>
                                     </div>
                                     <div class="buttons-cart checkout--btn">
-                                        <a href="#">Update</a>
-                                        <a href="#">Checkout</a>
+
+                                        <a href="./checkout.php">Checkout</a>
                                     </div>
                                 </div>
                             </div>

@@ -50,7 +50,7 @@
                                   <li><a href="./index.php">Home</a></li>
                                   <li><a href="./about.php">About Us</a></li>
                                   <li><a href="./login_user.php">Login</a></li>
-                                  <li><a href="./mycart.php">My Cart</a></li>
+                                  <li><a href="./cart.php">My Cart</a></li>
                                   <li><a href="./shopnow.php">All Product</a></li>
                               </ul>
                           </div>

@@ -2,7 +2,7 @@
 require("./connection_user.php");
 require("./header.php");
 
-if(isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     // Get the form data
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
     $result = mysqli_query($con, $sql);
 
     // Check if the user exists in the database
-    if(mysqli_num_rows($result) > 0){
+    if (mysqli_num_rows($result) > 0) {
         // Fetch user data
         $user = mysqli_fetch_assoc($result);
 
@@ -132,6 +132,8 @@ if(isset($_POST['submit'])){
             <div class="contact-btn">
                 <button type="submit" name="submit" class="fv-btn">Login</button>
             </div>
+            <br>
+            <a href="./signup.php">I Don't Have My Account</a>
         </form>
     </div>
 </section>
