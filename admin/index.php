@@ -9,8 +9,8 @@ $result_product_show = mysqli_query($con, $sql_product_show);
 $sql_category_show = "SELECT * FROM category";
 $result_category_show = mysqli_query($con, $sql_category_show);
 
-// $sql_order_show = "SELECT * FROM orders";
-// $result_order_show = mysqli_query($con, $sql_order_show);
+$sql_order_show = "SELECT * FROM orders";
+$result_order_show = mysqli_query($con, $sql_order_show);
 
 $sql_user_show = "SELECT * FROM user";
 $result_user_show = mysqli_query($con, $sql_user_show);
@@ -42,7 +42,7 @@ $result_user_show = mysqli_query($con, $sql_user_show);
                 <i class="fa fa-chart-area fa-3x text-primary"></i>
                 <div class="ms-3">
                     <p class="mb-2">Total Orders</p>
-                    <h6 class="mb-0">bhot sare</h6>
+                    <h6 class="mb-0"><?php echo mysqli_num_rows($result_order_show);?></h6>
                 </div>
             </div>
         </div>

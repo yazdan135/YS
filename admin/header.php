@@ -64,7 +64,7 @@
                     <a href="./admin_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Admins</a>
                     <a href="./category_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Category</a>
                     <a href="./product_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Products</a>
-                    <a href="./order_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Orders</a>
+                    <a href="./order.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Orders</a>
                     <a href="./user_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Users</a>
                     <a href="./userban_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Ban Users</a>
                     <a href="./news_show.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>News Letter</a>

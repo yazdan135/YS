@@ -93,6 +93,9 @@ $totalProduct=$obj->totalProduct();
                                         <div class="header__account">
                                             <a href="./logout.php">Logout</a>
                                         </div>
+                                        <div class="header__account">
+                                            <a href="./myorder.php">MyOrder</a>
+                                        </div>
                                     <?php else: ?>
                                         <!-- If user is not logged in, show Login and SignUp buttons -->
                                         <div class="header__account">
