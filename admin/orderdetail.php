@@ -24,7 +24,7 @@ $order_id = mysqli_real_escape_string($con, $_GET['id']);
                         <tbody>
                             <tr>
                                 <?php
-                                $user_id = $_SESSION['id'];
+                                // $user_id = $_SESSION['id'];
                                 $sql_get_orders = "SELECT orders_detail.*, product.product_name, product.image, orders.address, orders.city, orders.postal_code
                                                        FROM orders_detail 
                                                        JOIN product ON orders_detail.product_id = product.id 
